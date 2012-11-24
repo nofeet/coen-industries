@@ -1,0 +1,14 @@
+syntax: glob
+
+# Eclipse
+./.project
+./.pydevproject
+
+# Database
+./coen_industries.db
+
+# Python
+*.pyc
+
+# Other
+*~
