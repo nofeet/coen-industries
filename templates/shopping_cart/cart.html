@@ -1,0 +1,16 @@
+
+{% block body %}
+    <table>
+        <tr>
+            <th>Product</th>
+        </tr>
+        {% for item in cart %}
+        <tr>
+            <td>{{ item.product.name }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+
+<a href="/shopping_cart/checkout/">Checkout</a>
+<a href="{{ continue_link }}">Continue Shopping</a>
