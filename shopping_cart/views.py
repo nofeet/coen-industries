@@ -6,9 +6,9 @@ from shopping_cart.models import Product, Merchant
 
 
 
-def index(request):
+def index(request, merchant_name):
     """View for the Front page. Displays Product list."""
-    merchant = Merchant.objects.get(name__iexact=u"Lebowski's")
+    merchant = Merchant.objects.get(name__iexact=merchant_name)
     product_list = Product.objects.all()
     return render_to_response("shopping_cart/index.html",
                               {"merchant": merchant,
