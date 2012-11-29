@@ -113,6 +113,9 @@ TEMPLATE_DIRS = (
     os.path.join(PROJECT_ROOT, 'templates'),
 )
 
+# Allow login sessions to work across all subdomains.
+SESSION_COOKIE_DOMAIN = '.coen.com'
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',

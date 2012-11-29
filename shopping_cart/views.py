@@ -1,14 +1,18 @@
 from django.contrib.auth.decorators import login_required
+from django.core.urlresolvers import reverse
+from django.http import HttpResponseRedirect
 from django.shortcuts import redirect, render_to_response
+from django.template.context import RequestContext
 
 from shopping_cart.cart import Cart
 from shopping_cart.models import Product, Merchant
 
 
 
-def index(request, merchant_name):
+
+def index(request):
     """View for the Front page. Displays Product list."""
-    merchant = Merchant.objects.get(name__iexact=merchant_name)
+    merchant = Merchant.objects.get(subdomain__iexact=request.subdomain)
     product_list = Product.objects.all()
     return render_to_response("shopping_cart/index.html",
                               {"merchant": merchant,
@@ -17,7 +21,7 @@ def index(request, merchant_name):
 
 def detail(request, product_id):
     """View for a Product's detail page."""
-    merchant = Merchant.objects.get(name__iexact=u"Lebowski's")
+    merchant = Merchant.objects.get(subdomain__iexact=request.subdomain)
     product = Product.objects.get(id__exact=product_id)
     return render_to_response("shopping_cart/detail.html",
                               {"merchant": merchant,
@@ -39,5 +43,22 @@ def view_cart(request):
 
 
 @login_required
+def finalize(request):
+    return render_to_response("shopping_cart/finalize.html",
+                              {"cart": Cart(request)},
+                              context_instance=RequestContext(request))
+
+
+@login_required
 def checkout(request):
-    return render_to_response("shopping_cart/checkout.html")
+    cart = Cart(request)
+    cart.checkout(request.user)
+    return HttpResponseRedirect(reverse('shopping_cart.views.finish'))
+
+
+def finish(request):
+    return render_to_response("shopping_cart/finish.html")
+
+
+def register(request):
+    return render_to_response("shopping_cart/register.html")

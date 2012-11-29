@@ -1,4 +1,6 @@
-import models
+import datetime
+
+import shopping_cart.models as models
 
 
 CART_ID = 'CART-ID'
@@ -59,3 +61,7 @@ class Cart(object):
         for item in self.cart.item_set:
             item.delete()
 
+    def checkout(self, user):
+        self.cart.customer = models.Customer.objects.get(user=user)
+        self.cart.purchase_date = datetime.datetime.now()
+        self.cart.save()
