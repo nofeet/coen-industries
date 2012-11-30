@@ -1,0 +1,594 @@
+[
+    {
+        "pk": "ba43b6c8c9a51cefd04a7627592fa88a", 
+        "model": "sessions.session", 
+        "fields": {
+            "expire_date": "2012-12-14T05:10:11.516Z", 
+            "session_data": "NjliNGUyYjhkNzc1NTQ1MWJjODU5NjNjY2M1ZGQzMTc0NGUxOTc1YTqAAn1xAShVB0NBUlQtSURx\nAksBVQ1fYXV0aF91c2VyX2lkSwFVEl9hdXRoX3VzZXJfYmFja2VuZFUpZGphbmdvLmNvbnRyaWIu\nYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmR1Lg==\n"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "sites.site", 
+        "fields": {
+            "domain": "example.com", 
+            "name": "example.com"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "shopping_cart.product", 
+        "fields": {
+            "merchant": 1, 
+            "price": "12", 
+            "name": "\"Nagelbett\" by Autobahn", 
+            "description": "The latest techno-pop masterpiece CD from the group that has no ethos."
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "shopping_cart.product", 
+        "fields": {
+            "merchant": 3, 
+            "price": "10", 
+            "name": "Bible", 
+            "description": "Sold by Big Dan Teague"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "shopping_cart.product", 
+        "fields": {
+            "merchant": 2, 
+            "price": "3", 
+            "name": "Book of 3-cent stamps", 
+            "description": "Art: Mallard Ducks"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "shopping_cart.product", 
+        "fields": {
+            "merchant": 3, 
+            "price": "3", 
+            "name": "Dapper Dan", 
+            "description": "For a Dapper Dan Man!"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "shopping_cart.product", 
+        "fields": {
+            "merchant": 3, 
+            "price": "5", 
+            "name": "Fop", 
+            "description": "\"Well, it didn't look like a two-horse town, but try finding a decent hair jelly.\""
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "shopping_cart.product", 
+        "fields": {
+            "merchant": 1, 
+            "price": "15", 
+            "name": "Severed Toe", 
+            "description": "So real, it will fool your friends. Expedited shipping available: it will arrive by 3pm!"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "shopping_cart.product", 
+        "fields": {
+            "merchant": 2, 
+            "price": "5000", 
+            "name": "Used Car", 
+            "description": "Jerry Lundegaard is ready to make a deal."
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "shopping_cart.product", 
+        "fields": {
+            "merchant": 1, 
+            "price": "50", 
+            "name": "Used Rug", 
+            "description": "It really ties the room together."
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "shopping_cart.product", 
+        "fields": {
+            "merchant": 2, 
+            "price": "300", 
+            "name": "Wood Chipper", 
+            "description": "Good for chipping other things, too."
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "shopping_cart.cart", 
+        "fields": {
+            "customer": null, 
+            "purchase_date": null
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "shopping_cart.item", 
+        "fields": {
+            "product": 7, 
+            "cart": 1, 
+            "quantity": 1
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "shopping_cart.item", 
+        "fields": {
+            "product": 7, 
+            "cart": 1, 
+            "quantity": 1
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "shopping_cart.item", 
+        "fields": {
+            "product": 3, 
+            "cart": 1, 
+            "quantity": 1
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_logentry", 
+            "name": "Can add log entry", 
+            "content_type": 7
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_logentry", 
+            "name": "Can change log entry", 
+            "content_type": 7
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_logentry", 
+            "name": "Can delete log entry", 
+            "content_type": 7
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_group", 
+            "name": "Can add group", 
+            "content_type": 2
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_group", 
+            "name": "Can change group", 
+            "content_type": 2
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_group", 
+            "name": "Can delete group", 
+            "content_type": 2
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_permission", 
+            "name": "Can add permission", 
+            "content_type": 1
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_permission", 
+            "name": "Can change permission", 
+            "content_type": 1
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_permission", 
+            "name": "Can delete permission", 
+            "content_type": 1
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_user", 
+            "name": "Can add user", 
+            "content_type": 3
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_user", 
+            "name": "Can change user", 
+            "content_type": 3
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_user", 
+            "name": "Can delete user", 
+            "content_type": 3
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_contenttype", 
+            "name": "Can add content type", 
+            "content_type": 4
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_contenttype", 
+            "name": "Can change content type", 
+            "content_type": 4
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_contenttype", 
+            "name": "Can delete content type", 
+            "content_type": 4
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_session", 
+            "name": "Can add session", 
+            "content_type": 5
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_session", 
+            "name": "Can change session", 
+            "content_type": 5
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_session", 
+            "name": "Can delete session", 
+            "content_type": 5
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_cart", 
+            "name": "Can add cart", 
+            "content_type": 11
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_cart", 
+            "name": "Can change cart", 
+            "content_type": 11
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_cart", 
+            "name": "Can delete cart", 
+            "content_type": 11
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_item", 
+            "name": "Can add item", 
+            "content_type": 12
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_item", 
+            "name": "Can change item", 
+            "content_type": 12
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_item", 
+            "name": "Can delete item", 
+            "content_type": 12
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_merchant", 
+            "name": "Can add merchant", 
+            "content_type": 9
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_merchant", 
+            "name": "Can change merchant", 
+            "content_type": 9
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_merchant", 
+            "name": "Can delete merchant", 
+            "content_type": 9
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_product", 
+            "name": "Can add product", 
+            "content_type": 10
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_product", 
+            "name": "Can change product", 
+            "content_type": 10
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_product", 
+            "name": "Can delete product", 
+            "content_type": 10
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_userprofile", 
+            "name": "Can add user profile", 
+            "content_type": 8
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_userprofile", 
+            "name": "Can change user profile", 
+            "content_type": 8
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_userprofile", 
+            "name": "Can delete user profile", 
+            "content_type": 8
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "add_site", 
+            "name": "Can add site", 
+            "content_type": 6
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "change_site", 
+            "name": "Can change site", 
+            "content_type": 6
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "auth.permission", 
+        "fields": {
+            "codename": "delete_site", 
+            "name": "Can delete site", 
+            "content_type": 6
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "ecoen", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": true, 
+            "is_staff": true, 
+            "last_login": "2012-11-30T04:47:43.407Z", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "pbkdf2_sha256$10000$guexeDc0rr4i$SyfcS5tRuOuVQbRy/NEeJlkx5w39vw1APmVUNyTtr4w=", 
+            "email": "ecoen@coen.com", 
+            "date_joined": "2012-11-30T04:46:47.843Z"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "tdude", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2012-11-30T04:48:18.629Z", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "pbkdf2_sha256$10000$gkj0HWm9KUHY$73+0cTwQJpZppXF9qfwY3aNmr7AM/+WhFq/VCftJU7U=", 
+            "email": "", 
+            "date_joined": "2012-11-30T04:48:18.629Z"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "mgunderson", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2012-11-30T04:50:23.288Z", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "pbkdf2_sha256$10000$GFG5PVPbVahY$lqCHnJ0jgsc8lMzL/Ez+xxN22TD/CLs7jhVybmKc7xU=", 
+            "email": "", 
+            "date_joined": "2012-11-30T04:50:23.288Z"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "umcgill", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": false, 
+            "last_login": "2012-11-30T04:51:00.262Z", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "pbkdf2_sha256$10000$dqy9i2d9ESSp$3yC7ZfVnRDYyHMopdgfLwogMkiLMBbGjv2LThFbuUV4=", 
+            "email": "", 
+            "date_joined": "2012-11-30T04:51:00.262Z"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "shopping_cart.userprofile", 
+        "fields": {
+            "user": 1
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "shopping_cart.userprofile", 
+        "fields": {
+            "user": 2
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "shopping_cart.userprofile", 
+        "fields": {
+            "user": 3
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "shopping_cart.userprofile", 
+        "fields": {
+            "user": 4
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "shopping_cart.merchant", 
+        "fields": {
+            "admin": 2, 
+            "subdomain": "lebowskis", 
+            "name": "Lebowski's"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "shopping_cart.merchant", 
+        "fields": {
+            "admin": 3, 
+            "subdomain": "fargo-dept", 
+            "name": "Fargo Department Store"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "shopping_cart.merchant", 
+        "fields": {
+            "admin": 4, 
+            "subdomain": "soggyboys", 
+            "name": "Soggy Bottom Boys"
+        }
+    }
+]
