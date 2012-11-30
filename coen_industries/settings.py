@@ -116,6 +116,8 @@ TEMPLATE_DIRS = (
 # User profile model for this site.
 AUTH_PROFILE_MODULE = "shopping_cart.UserProfile"
 
+LOGIN_REDIRECT_URL = "/shopping_cart"
+
 # Allow login sessions to work across all subdomains.
 SESSION_COOKIE_DOMAIN = '.coen.com'
 
