@@ -12,7 +12,7 @@ from shopping_cart.models import Product, Merchant
 def index(request):
     """View for the Front page. Displays Product list."""
     merchant = Merchant.objects.get(subdomain__iexact=request.subdomain)
-    product_list = Product.objects.all()
+    product_list = Product.objects.filter(merchant=merchant)
     return render_to_response("shopping_cart/index.html",
                               {"merchant": merchant,
                                "product_list": product_list})
@@ -56,7 +56,8 @@ def checkout(request):
 
 
 def finish(request):
-    return render_to_response("shopping_cart/finish.html")
+    return render_to_response("shopping_cart/finish.html",
+                              {"cart": Cart(request).cart})
 
 
 def register(request):
