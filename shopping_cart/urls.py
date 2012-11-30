@@ -8,5 +8,5 @@ urlpatterns = patterns("shopping_cart.views",
     url(r"^finalize/$", "finalize"),
     url(r"^checkout/$", "checkout"),
     url(r"^finish/$", "finish"),
-    url(r'^register/', 'register'),
+    url(r'^register/$', 'register'),
 )
