@@ -21,6 +21,7 @@ post_save.connect(create_user_profile, sender=User)
 class Merchant(models.Model):
     name = models.CharField(max_length=40)
     subdomain = models.CharField(max_length=15)
+    admin = models.OneToOneField(User)
 
     def __unicode__(self):
         return self.name
