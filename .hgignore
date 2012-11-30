@@ -4,9 +4,6 @@ syntax: glob
 ./.project
 ./.pydevproject
 
-# Database
-./coen_industries.db
-
 # Python
 *.pyc
 
