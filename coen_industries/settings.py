@@ -113,6 +113,9 @@ TEMPLATE_DIRS = (
     os.path.join(PROJECT_ROOT, 'templates'),
 )
 
+# User profile model for this site.
+AUTH_PROFILE_MODULE = "shopping_cart.UserProfile"
+
 # Allow login sessions to work across all subdomains.
 SESSION_COOKIE_DOMAIN = '.coen.com'
 

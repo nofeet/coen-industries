@@ -1,4 +1,4 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import patterns, url
 
 urlpatterns = patterns("shopping_cart.views",
     url(r"^$", "index"),
@@ -9,9 +9,4 @@ urlpatterns = patterns("shopping_cart.views",
     url(r"^checkout/$", "checkout"),
     url(r"^finish/$", "finish"),
     url(r'^register/', 'register'),
-)
-
-urlpatterns += patterns("",
-    url(r'^login/', 'django.contrib.auth.views.login'),
-    url(r'^logout/', 'django.contrib.auth.views.logout'),
 )

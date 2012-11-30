@@ -1,4 +1,5 @@
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import UserCreationForm
 from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect, render_to_response
@@ -6,8 +7,6 @@ from django.template.context import RequestContext
 
 from shopping_cart.cart import Cart
 from shopping_cart.models import Product, Merchant
-
-
 
 
 def index(request):
@@ -61,4 +60,13 @@ def finish(request):
 
 
 def register(request):
-    return render_to_response("shopping_cart/register.html")
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect("/shopping_cart/")
+    else:
+        form = UserCreationForm()
+    return render_to_response("shopping_cart/register.html",
+                              {"form": form},
+                              context_instance=RequestContext(request))

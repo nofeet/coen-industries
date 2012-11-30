@@ -62,6 +62,6 @@ class Cart(object):
             item.delete()
 
     def checkout(self, user):
-        self.cart.customer = models.Customer.objects.get(user=user)
+        self.cart.customer = models.UserProfile.objects.get(user=user)
         self.cart.purchase_date = datetime.datetime.now()
         self.cart.save()
