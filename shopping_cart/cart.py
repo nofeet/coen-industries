@@ -37,26 +37,6 @@ class Cart(object):
         item.quantity = 1
         item.save()
 
-    def remove(self, product):
-        try:
-            item = models.Item.objects.get(
-                cart=self.cart,
-                product=product,
-            )
-        except models.Item.DoesNotExist:
-            raise ItemDoesNotExist
-        else:
-            item.delete()
-
-    def update(self, product, quantity, unit_price=None):
-        try:
-            item = models.Item.objects.get(
-                cart=self.cart,
-                product=product,
-            )
-        except models.Item.DoesNotExist:
-            raise ItemDoesNotExist
-
     def clear(self):
         for item in self.cart.item_set:
             item.delete()
