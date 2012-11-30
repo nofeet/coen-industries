@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.core.urlresolvers import reverse
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, Http404
 from django.shortcuts import redirect, render_to_response
 from django.template.context import RequestContext
 
@@ -11,7 +11,11 @@ from shopping_cart.models import Product, Merchant
 
 def index(request):
     """View for the Front page. Displays Product list."""
-    merchant = Merchant.objects.get(subdomain__iexact=request.subdomain)
+    try:
+        merchant = Merchant.objects.get(subdomain__iexact=request.subdomain)
+    except Merchant.DoesNotExist:
+        # not on a merchant subdomain
+        raise Http404
     product_list = Product.objects.filter(merchant=merchant)
     return render_to_response("shopping_cart/index.html",
                               {"merchant": merchant,
@@ -20,7 +24,11 @@ def index(request):
 
 def detail(request, product_id):
     """View for a Product's detail page."""
-    merchant = Merchant.objects.get(subdomain__iexact=request.subdomain)
+    try:
+        merchant = Merchant.objects.get(subdomain__iexact=request.subdomain)
+    except Merchant.DoesNotExist:
+        # not on a merchant subdomain
+        raise Http404
     product = Product.objects.get(id__exact=product_id)
     return render_to_response("shopping_cart/detail.html",
                               {"merchant": merchant,
