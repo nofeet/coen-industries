@@ -9,12 +9,12 @@
     <div id="sidebar">
         {% block sidebar %}
         <ul>
-            <li><a href="/shopping_cart">Home</a></li>
-            <li><a href="/accounts/login">Login</a></li>
-            <li><a href="/accounts/logout">Logout</a></li>
-            <li><a href="/shopping_cart/register">Register</a></li>
-            <li><a href="/shopping_cart/view_cart">View Cart</a></li>
-            <li><a href="/shopping_cart/checkout">Checkout</a></li>
+            <li><a href="{% url shopping_cart.views.index %}">Home</a></li>
+            <li><a href="{% url django.contrib.auth.views.login %}">Login</a></li>
+            <li><a href="{% url django.contrib.auth.views.logout %}">Logout</a></li>
+            <li><a href="{% url shopping_cart.views.register %}">Register</a></li>
+            <li><a href="{% url shopping_cart.views.view_cart %}">View Cart</a></li>
+            <li><a href="{% url shopping_cart.views.finalize %}">Checkout</a></li>
         </ul>
         {% endblock %}
     </div>

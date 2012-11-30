@@ -12,5 +12,5 @@
     </table>
 {% endblock %}
 
-<a href="/shopping_cart/finalize/">Checkout</a>
+<a href="{% url shopping_cart.views.finalize %}">Checkout</a>
 <a href="{{ continue_link }}">Continue Shopping</a>

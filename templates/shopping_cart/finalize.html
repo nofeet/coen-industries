@@ -10,7 +10,7 @@
         </tr>
         {% for item in cart %}
         <tr>
-            <td>{{ item.product.name }}</td>
+            <td>${{ item.product.price }} - {{ item.product.name }}</td>
         </tr>
         {% endfor %}
     </table>
