@@ -17,7 +17,7 @@ It contains three merchant clients, each with product pages, a shopping cart and
 * Python 2.7
 * Django 1.4
 
-== Server Set-Up ==
+### Server Set-Up
 
 Add these entries to your /etc/hosts file:
 
@@ -27,7 +27,7 @@ Add these entries to your /etc/hosts file:
     127.0.0.1       not-a-merchant-test.coen.com
     127.0.0.1       soggyboys.coen.com
 
-== Administration ==
+### Administration
 
 Superuser--
 
